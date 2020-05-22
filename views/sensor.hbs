@@ -1,0 +1,36 @@
+<div class="sensor">
+    <div class="row">
+        <div class="col s12 center-align">
+            <h1>Sensor {{detector.location}}</h1>
+        </div>
+        <div class="col s6 offset-s3">
+            {{#if mySity}} 
+            <table class="highlight">
+                <thead>
+                <tr>
+                    <th>Parameters</th>
+                    <th>Indicators</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>Temperature</td>
+                    <td>{{temp}}</td>
+                </tr>
+                <tr>
+                    <td>Pressure</td>
+                    <td>{{mySity.main.pressure}}</td>
+                </tr>
+                <tr>
+                    <td>Humidity</td>
+                    <td>{{mySity.main.humidity}}%</td>
+                </tr>
+                </tbody>
+            </table>
+            {{else}}
+            <p class="alertSensor">No information about this sensor</p>
+            {{/if}}
+        </div>
+    </div>
+</div>

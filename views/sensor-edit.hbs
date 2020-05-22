@@ -1,0 +1,18 @@
+<h1>Редактировать датчик</h1>
+<div class="row">
+<div class="col s6">
+<form action="/edit" method="POST">
+    <div class="input-field">
+        <input placeholder="location"  name="location" id="location" type="text" class="validate" value="{{detector.location}}" required >
+        <label for="location">Model detector</label>
+        <span class="helper-text" data-error="Wrong" data-success="Success"></span>
+    </div>
+
+    <input type="hidden" name="id" value="{{detector.id}}">
+    <button class="btn waves-effect waves-light" type="submit">Редактировать
+    <i class="material-icons right">check</i>
+  </button>
+    <input type="hidden" name="_csrf" value="{{csrf}}">
+</form>
+    </div>
+</div>
