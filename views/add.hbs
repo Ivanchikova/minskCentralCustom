@@ -1,0 +1,28 @@
+<h1>Add new detector</h1>
+{{#if error}}
+<p class="alert">{{error}}</p>
+{{/if}}
+<form action="/add" method="POST">
+    <div class="input-field">
+        <input placeholder="model_detector" name="name_detector" id="name_detector" type="text" class="validate"
+            value="{{data.name_detector}}" required>
+        <label for="name_detector">Model detector</label>
+        <span class="helper-text" data-error="Wrong" data-success="Success"></span>
+    </div>
+    <div class="input-field">
+        <input placeholder="input text" name="model_detector" id="model_detector" type="text" class="validate"
+            value="{{data.model_detector}}" required>
+        <label for="model_detector">Name detector</label>
+        <span class="helper-text" data-error="Wrong" data-success="Success"></span>
+    </div>
+    <div class="input-field">
+        <input placeholder="producing_country" name="producing_country" id="producing_country" type="text"
+            class="validate" value="{{data.producing_country}}" required>
+        <label for="producing_country">Producing country</label>
+        <span class="helper-text" data-error="Wrong" data-success="Success"></span>
+    </div>
+    <button class="btn waves-effect waves-light" type="submit">Submit
+        <i class="material-icons right">send</i>
+    </button>
+    <input type="hidden" name="_csrf" value="{{csrf}}">
+</form>
