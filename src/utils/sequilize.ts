@@ -1,8 +1,11 @@
 import { Sequelize, Model, DataTypes, BuildOptions } from 'sequelize';
 
-const sequelize = new Sequelize('Weather', 'root', '1234', {
+const sequelize = new Sequelize('MinskCentralCustom', 'root', '1234', {
     host: "localhost",
-    dialect: "mysql"
+    dialect: "mysql",
+    define: {
+        timestamps: false
+    }
 });
 
 export default sequelize;

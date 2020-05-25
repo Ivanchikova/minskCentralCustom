@@ -15,7 +15,6 @@ router.get('/profile', auth, async (req, res) => {
 router.post('/profile', auth, async (req, res) => {
     try {
         const candidate = await User.findByPk(req.body.user.id);
-        console.log(candidate);
          const toChange = {
                fio: req.body.fio,
                avatarURL: ''

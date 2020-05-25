@@ -1,0 +1,39 @@
+<div class="grass">
+  <h1 class="center-align">Вакансии</h1>
+  <div class="row">
+    {{#if freeVacancy.length}}
+    {{#each freeVacancy}}
+    <div class="col s12 m12">
+      <div class="card blue-grey darken-1 hoverable">
+        <div class="card-content white-text">
+          <span class="card-title location">{{jobVacancy}}</span>
+          <p>{{description}}</p>
+        </div>
+        <div class="card-action cardFlex">
+          <a href="/vacancies/{{id}}" target="__blank">Открыть</a>
+          {{#if @root.isAdmin}}
+          <a href="/vacancies/edit/{{id}}?allow=true">Редактировать</a>
+          <form action="/vacancies/delete" method="POST" class="formCard">
+            <input type="hidden" name="id" value="{{id}}">
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <h5>Вы уверены что хотите удалить вакансию {{jobVacancy}}?</h5>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary red color-footer">Да</button>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat color-footer">Нет</a>
+              </div>
+            </div>
+            <input type="hidden" name="_csrf" value="{{@root.csrf}}">
+            <a class="waves-effect waves-light btn modal-trigger red" href="#modal1">Удалить</a>
+          </form>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{else}}
+  <p>Вакансий на данный момент нет!</p>
+  {{/if}}
+</div>

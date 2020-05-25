@@ -1,0 +1,33 @@
+<div class="vacancy">
+    <div class="row vacancy-row">
+        <div class="col s6 offset-s3 ">
+            {{#if freeVacancy}}
+            <table class="highlight grey table-vacancy">
+                <thead>
+                    <tr black>
+                        <th>Вакансия</th>
+                        <th>Значения</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Название</td>
+                        <td>{{freeVacancy.jobVacancy}}</td>
+                    </tr>
+                    <tr>
+                        <td>Описание</td>
+                        <td>{{freeVacancy.description}}</td>
+                    </tr>
+                    <tr>
+                        <td>Заработная плата</td>
+                        <td>{{freeVacancy.wage}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            {{else}}
+            <p class="alertVacancy">Нет информации о вакансии</p>
+            {{/if}}
+        </div>
+    </div>
+</div>

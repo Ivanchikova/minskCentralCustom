@@ -6,11 +6,11 @@ export default ( email:string, tolen:string ) => {
     to: email,
     subject: 'Восстановение доступа',
     html: `
-    <h1>Did you forget your password?</h1>
-    <p>If not, ignore the letter</p>
-    <p>Otherwise click below:</p>
-    <p><a href="${keys.BASE_URL}/auth/password/${tolen}">Restore access</a></p>
+    <h1>Вы забыли свой пароль??</h1>
+    <p>Если нет, игнорируйте это письмо</p>
+    <p>Для восстановления перейдите по ссылке ниже:</p>
+    <p><a href="${keys.BASE_URL}/auth/password/${tolen}">Восстановить пароль</a></p>
     <hr />
-    <a href=${keys.BASE_URL}>Weather application</a>`
+    <a href=${keys.BASE_URL}>Минская центральная таможня</a>`
    }
 }

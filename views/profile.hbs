@@ -1,4 +1,4 @@
-<h1>Profile</h1>
+<h1 class="center-align">Профиль</h1>
 <div class="container">
 <div class="row">
     <div class="col s6">
@@ -7,20 +7,20 @@
         src="/{{user.avatarURL}}" 
         alt="avatar-{{user.login}}">
         {{else}}
-        <p>No avatar</p>
+        <p>Нет фотографии</p>
         {{/if}}
     </div>
     <div class="col s6">
         <form action="/profile" method="POST" enctype="multipart/form-data">
-            <p> Your email: {{user.email}}</p>
+            <p> Ваш email: {{user.email}}</p>
                 <div class="input-field">
                     <input placeholder="fio" name="fio" id="fio" type="text" class="validate" required value="{{user.fio}}">
-                    <label for="fio">your fio</label>
+                    <label for="fio">Ваша фамилия</label>
                     <span class="helper-text" data-error="the name can not be empty"></span>
                 </div>
             <div class="file-field input-field">
                 <div class="btn">
-                    <span>Avatar</span>
+                    <span>Аватар</span>
                     <input type="file" name="avatar">
                 </div>
                 <div class="file-path-wrapper">
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <input type="hidden" name="_csrf" value="{{csrf}}">
-                <button class="btn waves-effect waves-light" type="submit">Submit
+                <button class="btn waves-effect waves-light" type="submit">Отправить
                   <i class="material-icons right">change</i>
                 </button>
         </form>

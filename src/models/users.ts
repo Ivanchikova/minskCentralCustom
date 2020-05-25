@@ -5,6 +5,7 @@ interface ModelUser extends Model {
     readonly id: number,
     password: string,
     readonly email: string,
+    readonly login: string,
     resetTolen: string | undefined,
     resetTolenExp: number | undefined
 };

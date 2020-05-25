@@ -36,7 +36,7 @@ export const registerValidators =  [
     .trim()
 ];
 
-export const sensorValidators = [
-    check('location', 'Минимальное количество символов 2').isLength({ min: 2})
+export const vacancyValidators = [
+    check('jobVacancy', 'Минимальное количество символов 2').isLength({ min: 2})
     .trim(),
 ];

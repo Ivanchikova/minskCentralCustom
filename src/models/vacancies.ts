@@ -4,24 +4,34 @@ import sequelize from '../utils/sequilize';
 
 interface MyModel extends Model {
     readonly id: number,
-    readonly location: string;
+    readonly jobVacancy: string,
+    readonly description: string,
+    readonly wage: string
 };
 
   type MyModelStatic = typeof Model & {
     new (values?: object, options?: BuildOptions): MyModel;
 };
 
-const detector = <MyModelStatic>sequelize.define("detector", {
+const freeVacancy = <MyModelStatic>sequelize.define("freeVacancy", {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
         allowNull: false,
     },
-    location: {
+    jobVacancy: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    description: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    wage: {
         type: DataTypes.STRING,
         allowNull: false
     }
 });
 
-export default detector;
+export default freeVacancy;

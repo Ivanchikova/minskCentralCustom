@@ -1,3 +1,24 @@
+.header {
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+/*----------------------- MAIN ------------------------------ */
+nav {
+    height: 128px;
+}
+
+.nav-wrapper {
+    padding: 30px;
+    background-image: url("https://cdn.pixabay.com/photo/2015/12/15/09/02/banner-1093898_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-text {
+    background-image: url("https://cdn.pixabay.com/photo/2015/12/15/09/02/banner-1093898_960_720.jpg");
+}
+/*----------------------- NAV ------------------------------ */
 .card-title.location {
     font-size: 3rem;
     color: black;
@@ -26,8 +47,9 @@ nav .brand-logo {
     height: auto;
 }
 
-.brandLogo {
+.brand-logo {
     margin-left: 1em;
+    font-size: 2.5rem;
 }
 
 body {

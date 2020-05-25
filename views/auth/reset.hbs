@@ -4,14 +4,14 @@
     <p class="alert">{{error}}</p>
     {{/if}}
     
-    <h1>Forgot your password?</h1>
+    <h1>Забыли свой пароль?</h1>
         <form action="/auth/reset" method="POST">
             <div class="input-field">
                 <input placeholder="email" name="email" id="email" type="email" class="validate" required>
-                <label for="email" id="label">Please enter your email</label>
+                <label for="email" id="label">Пожалуйста введите свое email</label>
                 <span class="helper-text" data-error="Wrong" data-success="Success"></span>
             </div>
-                 <button class="btn waves-effect waves-light" type="submit">Reset the password
+                 <button class="btn waves-effect waves-light" type="submit">Cбросить пароль
                     <i class="material-icons right">send</i>
                  </button>
         <input type="hidden" name="_csrf" value="{{csrf}}">

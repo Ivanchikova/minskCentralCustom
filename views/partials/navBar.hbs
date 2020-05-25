@@ -1,66 +1,67 @@
-  <nav>
-    <div class="nav-wrapper">
-      <a href="/" class="brand-logo brandLogo">Weather all day!</a>
-      <a href="/" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        {{#if isHome}}
-        <li class="active"><a href="/">Main</a></li>
-        {{else}}
-        <li><a href="/">Main</a></li>
-        {{/if}}
+<nav>
+  <div class="nav-wrapper">
+    <img src="http://www.mct.customs.gov.by/images/storage/banners/000600_dbcaf1dc6c9642957400f3ff7abf8c66_work.jpg">
+    <a href="/" class="brand-logo brandLogo hide-on-med-and-down">МИНСКАЯ ЦЕНТРАЛЬНАЯ ТАМОЖНЯ</a>
+    <a href="/" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      {{#if isHome}}
+      <li class="active"><a href="/">Главная</a></li>
+      {{else}}
+      <li><a href="/">Главная</a></li>
+      {{/if}}
+      {{#if isAuth}}
+      {{#if isProfile}}
+      <li class="active"><a href="/profile">Профиль</a></li>
+      {{else}}
+      <li><a href="/profile">Профиль</a></li>
+      {{/if}}
+      {{/if}}
+      {{#if isVacancies}}
+      <li class="active"><a href="/vacancies">Вакансии</a></li>
+      {{else}}
+      <li><a href="/vacancies">Вакансии</a></li>
+      {{/if}}
+      {{#if isAdmin}}
+      {{#if isAdd}}
+      <li class="active"><a href="/add">Добавить вакансию</a></li>
+      {{else}}
+      <li><a href="/add">Добавить вакансию</a></li>
+      {{/if}}
+      <li><a href="auth/logout">Выйти</a></li>
+      {{else}}
+      {{#if isLogin}}
+      <li class="active"><a href="/auth/login#login">Авторизация</a></li>
+      {{else}}
+      <li><a href="/auth/login#login">Авторизация</a></li>
+      {{/if}}
+      {{/if}}
+    </ul>
+    <ul class="sidenav" id="mobile-demo">
+      {{#if isHome}}
+      <li class="active"><a href="/">Главная</a></li>
+      {{else}}
+      <li><a href="/">Главная</a></li>
+      {{/if}}
 
-        {{#if isSensors}}
-        <li class="active"><a href="/sensors">Sensors</a></li>
-        {{else}}
-        <li><a href="/sensors">Sensors</a></li>
-        {{/if}}
-        {{#if isAuth}}
-            {{#if isAdd}}
-            <li class="active"><a href="/add">Add sensor</a></li>
-            {{else}}
-            <li><a href="/add">Add sensor</a></li>
-            {{/if}}
-              {{#if isProfile}}
-              <li class="active"><a href="/profile">Profile</a></li>
-              {{else}}
-              <li><a href="/profile">Profile</a></li>
-            {{/if}}
-            <li><a href="auth/logout">Logout</a></li>
-          {{else}}
-          {{#if isLogin}}
-          <li class="active"><a href="/auth/login#login">Authorization</a></li>
-          {{else}}
-          <li><a href="/auth/login#login">Authorization</a></li>
-          {{/if}}
-        {{/if}}
-      </ul>
-    </div>
-  </nav>
-
-  <ul class="sidenav" id="mobile-demo">
-        {{#if isHome}}
-        <li class="active"><a href="/">Главная</a></li>
-        {{else}}
-        <li><a href="/">Главная</a></li>
-        {{/if}}
-
-        {{#if isSensors}}
-        <li class="active"><a href="/sensors">Датчики</a></li>
-        {{else}}
-        <li><a href="/sensors">Датчики</a></li>
-        {{/if}}
-        {{#if isAuth}}
-            {{#if isAdd}}
-            <li class="active"><a href="/add">Добавить датчик</a></li>
-            {{else}}
-            <li><a href="/add">Добавить датчик</a></li>
-            {{/if}}
-            <li><a href="auth/logout">Logout</a></li>
-          {{else}}
-          {{#if isLogin}}
-          <li class="active"><a href="auth/login#login">Авторизация</a></li>
-          {{else}}
-          <li><a href="auth/login#login">Авторизация</a></li>
-          {{/if}}
-        {{/if}}
-      </ul>
+      {{#if isVacancies}}
+      <li class="active"><a href="/vacancies">Вакансии</a></li>
+      {{else}}
+      <li><a href="/vacancies">Вакансии</a></li>
+      {{/if}}
+      {{#if isAuth}}
+      {{#if isAdd}}
+      <li class="active"><a href="/add">Добавить датчик</a></li>
+      {{else}}
+      <li><a href="/add">Добавить датчик</a></li>
+      {{/if}}
+      <li><a href="auth/logout">Logout</a></li>
+      {{else}}
+      {{#if isLogin}}
+      <li class="active"><a href="auth/login#login">Авторизация</a></li>
+      {{else}}
+      <li><a href="auth/login#login">Авторизация</a></li>
+      {{/if}}
+      {{/if}}
+    </ul>
+  </div>
+</nav>

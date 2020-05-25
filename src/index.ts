@@ -8,7 +8,7 @@
  import routerAdd from './routes/add';
  import routerLogin from './routes/auth';
  import profile from './routes/profile';
- import routerSensors from './routes/sensors';
+ import routerVacancy from './routes/vacancies';
  import session from 'express-session';
  const MySQLStore = require('express-session-sequelize')(session.Store);
  import constMiddleware from './middleware/variables';
@@ -48,7 +48,7 @@ app.use(userMiddleware);
 
 app.use(routerHome);
 app.use('/add', routerAdd);
-app.use(routerSensors);
+app.use('/vacancies', routerVacancy);
 app.use(routerLogin);
 app.use(profile);
 app.use(error404);

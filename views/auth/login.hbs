@@ -1,30 +1,30 @@
   <div class="row auth">
     <div class="col s12">
       <ul class="tabs">
-        <li class="tab col s6"><a class="active" href="#login">Log in</a></li>
-        <li class="tab col s6"><a href="#register">Registration</a></li>
+        <li class="tab col s6"><a class="active" href="#login">Войти</a></li>
+        <li class="tab col s6"><a href="#register">Зарегистрироваться</a></li>
       </ul>
     </div>
 <div id="login" class="col s6 offset-s3">
   {{#if LoginError}}
   <p class="alert">{{LoginError}}</p>
   {{/if}}
-  <h1 class="center-align">Log in app</h1>
+  <h1 class="center-align">Войти</h1>
 <form action="/auth/login" method="POST">
     <div class="input-field">
-        <input placeholder="login" name="login" id="login" type="text" class="validate" required>
-        <label for="login" id="label" >Please enter your login</label>
+        <input placeholder="логин" name="login" id="login" type="text" class="validate" required>
+        <label for="login" id="label" >Пожалуйста введите ваш логин</label>
         <span class="helper-text" data-error="Wrong" data-success="Success"></span>
     </div>
     <div class="input-field">
-        <input placeholder="password" name="password" id="password" type="password" class="validate" required>
-        <label for="password" id="label">Please enter your password</label>
+        <input placeholder="пароль" name="password" id="password" type="password" class="validate" required>
+        <label for="password" id="label">Пожалуйста введите ваш пароль</label>
         <span class="helper-text" data-error="Wrong" data-success="Success"></span>
     </div>
-    <button class="btn waves-effect waves-light" type="submit">Submit
+    <button class="btn waves-effect waves-light" type="submit">Отправить
     <i class="material-icons right">send</i>
   </button>
-  <a href='/auth/reset'><p>Forgot your password?</p></a>
+  <a href='/auth/reset'><p>Забыли пароль?</p></a>
   <input type="hidden" name="_csrf" value="{{csrf}}">
 </form>  
     </div>
@@ -32,34 +32,34 @@
   {{#if RegisterError}}
   <p class="alert">{{RegisterError}}</p>
   {{/if}}
-  <h1 class="center-align">Registration</h1>
+  <h1 class="center-align">Регистрация</h1>
 <form action="/auth/register" method="POST">
     <div class="input-field">
-        <input placeholder="fio" name="fio" id="fio" type="text" class="validate" required>
-        <label for="fio" id="label">Please enter your fio</label>
+        <input placeholder="Фамилия" name="fio" id="fio" type="text" class="validate" required>
+        <label for="fio" id="label">Фамилия</label>
         <span class="helper-text" data-error="Wrong" data-success="Success"></span>
     </div>
     <div class="input-field">
-        <input placeholder="login" name="login" id="relogin" type="text" class="validate" required>
-        <label for="login" id="label">Please enter your login</label>
+        <input placeholder="Логин" name="login" id="relogin" type="text" class="validate" required>
+        <label for="login" id="label">Логин</label>
         <span class="helper-text" data-error="Wrong" data-success="Success"></span>
     </div>
     <div class="input-field">
         <input placeholder="email" name="email" id="email" type="email" class="validate" required>
-        <label for="email" id="label">Please enter your email</label>
+        <label for="email" id="label">email</label>
         <span class="helper-text" data-error="Wrong" data-success="Success"></span>
     </div>
     <div class="input-field">
-        <input placeholder="password" name="password" id="repassword" type="password" class="validate" required>
-        <label for="password" id="label">Please enter your password</label>
+        <input placeholder="Пароль" name="password" id="repassword" type="password" class="validate" required>
+        <label for="password" id="label">Пароль</label>
         <span class="helper-text" data-error="Wrong" data-success="Success"></span>
     </div>
         <div class="input-field">
-        <input placeholder="confirm" name="confirm" id="confirm" type="password" class="validate" required>
-        <label for="password" id="label">Please enter your password again</label>
+        <input placeholder="Повторите пароль" name="confirm" id="confirm" type="password" class="validate" required>
+        <label for="password" id="label">Повторите пароль</label>
         <span class="helper-text" data-error="Wrong" data-success="Success"></span>
     </div>
-    <button class="btn waves-effect waves-light" type="submit">Submit
+    <button class="btn waves-effect waves-light" type="submit">Отправить
     <i class="material-icons right">send</i>
   </button>
   <input type="hidden" name="_csrf" value="{{csrf}}">
