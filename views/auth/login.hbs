@@ -1,0 +1,69 @@
+  <div class="row auth">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s6"><a class="active" href="#login">Войти</a></li>
+        <li class="tab col s6"><a href="#register">Зарегистрироваться</a></li>
+      </ul>
+    </div>
+<div id="login" class="col s6 offset-s3">
+  {{#if LoginError}}
+  <p class="alert">{{LoginError}}</p>
+  {{/if}}
+  <h1 class="center-align">Войти</h1>
+<form action="/auth/login" method="POST">
+    <div class="input-field">
+        <input placeholder="логин" name="login" id="login" type="text" class="validate" required>
+        <label for="login" id="label" >Пожалуйста введите ваш логин</label>
+        <span class="helper-text" data-error="Wrong" data-success="Success"></span>
+    </div>
+    <div class="input-field">
+        <input placeholder="пароль" name="password" id="password" type="password" class="validate" required>
+        <label for="password" id="label">Пожалуйста введите ваш пароль</label>
+        <span class="helper-text" data-error="Wrong" data-success="Success"></span>
+    </div>
+    <button class="btn waves-effect waves-light" type="submit">Отправить
+    <i class="material-icons right">send</i>
+  </button>
+  <a href='/auth/reset'><p>Забыли пароль?</p></a>
+  <input type="hidden" name="_csrf" value="{{csrf}}">
+</form>  
+    </div>
+<div id="register" class="col s6 offset-s3">
+  {{#if RegisterError}}
+  <p class="alert">{{RegisterError}}</p>
+  {{/if}}
+  <h1 class="center-align">Регистрация</h1>
+<form action="/auth/register" method="POST">
+    <div class="input-field">
+        <input placeholder="Фамилия" name="fio" id="fio" type="text" class="validate" required>
+        <label for="fio" id="label">Фамилия</label>
+        <span class="helper-text" data-error="Wrong" data-success="Success"></span>
+    </div>
+    <div class="input-field">
+        <input placeholder="Логин" name="login" id="relogin" type="text" class="validate" required>
+        <label for="login" id="label">Логин</label>
+        <span class="helper-text" data-error="Wrong" data-success="Success"></span>
+    </div>
+    <div class="input-field">
+        <input placeholder="email" name="email" id="email" type="email" class="validate" required>
+        <label for="email" id="label">email</label>
+        <span class="helper-text" data-error="Wrong" data-success="Success"></span>
+    </div>
+    <div class="input-field">
+        <input placeholder="Пароль" name="password" id="repassword" type="password" class="validate" required>
+        <label for="password" id="label">Пароль</label>
+        <span class="helper-text" data-error="Wrong" data-success="Success"></span>
+    </div>
+        <div class="input-field">
+        <input placeholder="Повторите пароль" name="confirm" id="confirm" type="password" class="validate" required>
+        <label for="password" id="label">Повторите пароль</label>
+        <span class="helper-text" data-error="Wrong" data-success="Success"></span>
+    </div>
+    <button class="btn waves-effect waves-light" type="submit">Отправить
+    <i class="material-icons right">send</i>
+  </button>
+  <input type="hidden" name="_csrf" value="{{csrf}}">
+</form>
+    </div>
+  </div>
+        

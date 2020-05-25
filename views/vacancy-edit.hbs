@@ -1,0 +1,30 @@
+<h1 class="center-align">Редактировать вакансию</h1>
+<div class="row rowEditVacancy" >
+    <div class="col s6 offset-s3 formEditVacancy" id="formEditVacancy">
+        <form action="/vacancies/edit" method="POST">
+            <div class="input-field">
+                <input placeholder="jobVacancy" name="jobVacancy" id="jobVacancy" type="text" class="validate"
+                    value="{{freeVacancy.jobVacancy}}" required>
+                <label for="jobVacancy">Название вакансии</label>
+                <span class="helper-text" data-error="Wrong" data-success="Success"></span>
+            </div>
+            <div class="input-field">
+                <input placeholder="description" name="description" id="description" type="text" class="validate"
+                    value="{{freeVacancy.description}}" required>
+                <label for="description">Название вакансии</label>
+                <span class="helper-text" data-error="Wrong" data-success="Success"></span>
+            </div>
+            <div class="input-field">
+                <input placeholder="wage" name="wage" id="wage" type="text" class="validate"
+                    value="{{freeVacancy.wage}}" required>
+                <label for="wage">Название вакансии</label>
+                <span class="helper-text" data-error="Wrong" data-success="Success"></span>
+            </div>
+            <input type="hidden" name="id" value="{{freeVacancy.id}}">
+            <button class="btn waves-effect waves-light" type="submit">Редактировать
+                <i class="material-icons right">check</i>
+            </button>
+            <input type="hidden" name="_csrf" value="{{csrf}}">
+        </form>
+    </div>
+</div>

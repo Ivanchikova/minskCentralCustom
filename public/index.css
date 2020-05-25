@@ -1,0 +1,120 @@
+.header {
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+/*----------------------- MAIN ------------------------------ */
+nav {
+    height: 128px;
+}
+
+.nav-wrapper {
+    padding: 30px;
+    background-image: url("https://cdn.pixabay.com/photo/2015/12/15/09/02/banner-1093898_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-text {
+    background-image: url("https://cdn.pixabay.com/photo/2015/12/15/09/02/banner-1093898_960_720.jpg");
+}
+/*----------------------- NAV ------------------------------ */
+.card-title.location {
+    font-size: 3rem;
+    color: black;
+}
+.sensor h1 {
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.sensor p {
+    background-color: grey;
+    font-size: 2rem;
+}
+
+nav .brand-logo {
+    font-size: 3vw;
+}
+
+.auth {
+    padding-top: 1rem;
+    font-family: 'Niconne', cursive; 
+}
+
+.avatar {
+    max-width: 300px;
+    height: auto;
+}
+
+.brand-logo {
+    margin-left: 1em;
+    font-size: 2.5rem;
+}
+
+body {
+    font-family: 'Niconne', cursive; 
+    background-image: url('https://images.wallpaperscraft.ru/image/trava_pole_zelenyj_117297_1920x1080.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+td, th {
+    color: white;
+    font-size: 2em;
+}
+
+.formCard {
+    display: inline;
+}
+
+a > p {
+    color:khaki;
+    font-size: 2em;
+}
+
+/*----------------------- ОШИБКИ ------------------------------ */
+
+.alert {
+    padding: .5rem 1rem;
+    background: rgba(255, 0, 0, .5);
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.sensor .alertSensor {
+    padding: .5rem 1rem;
+    background: rgba(255, 0, 0, .5);
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+/*----------------------- LOG IN ------------------------------ */
+
+#login h1 {
+    margin-bottom: 1.5em;
+    color: black;
+}
+
+.tabs .tab a {
+    color:black;
+    font-size: 2em;
+}
+
+.tabs {
+    border-radius: 20px;
+}
+
+#login, #password, #fio, #relogin, #email, #repassword, #confirm {
+    color: rgb(190, 202, 224);
+    font-size: 1.8rem;
+}
+
+#label {
+    color: white;
+    font-size: 1.5rem;
+}
+
+
